@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Button
+status: stable
+description: A full-width CTA link styled as a button. Rendered as an anchor element.
+props:
+  type: object
+  required:
+    - link
+  properties:
+    link:
+      type: object
+      title: Link
+      description: The anchor href and visible label.
+      required:
+        - url
+        - title
+      properties:
+        url:
+          type: string
+          title: URL
+          examples:
+            - '#'
+            - 'https://www.example.org'
+        title:
+          type: string
+          title: Link Text
+          examples:
+            - Add To Cart
+    attributes:
+      type: object
+      title: Attributes
+      description: Drupal attributes object. Additional HTML attributes (class, data-*, aria-*) merged onto the anchor element via create_attribute().

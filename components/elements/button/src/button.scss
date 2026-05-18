@@ -1,0 +1,36 @@
+@use 'partials' as *;
+
+.button {
+  @include type-scale(label, 14);
+  align-items: center;
+  background-color: var(--color-brand-black);
+  border-radius: rem(10px);
+  display: flex;
+  font-weight: var(--fw-semibold);
+  inline-size: 100%;
+  justify-content: center;
+  padding-block: rem(16px);
+  text-decoration: none;
+  transition-duration: .2s;
+
+  &:active {
+    box-shadow: 0 0 0 var(--color-white);
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: rem(2px) solid currentColor;
+    outline-offset: rem(3px);
+  }
+
+  &:hover {
+    box-shadow: 0 rem(5px) rem(20px) 0 rgba(var(--color-brand-black-rgb), .15);
+    cursor: pointer;
+    transform: translateY(-3px);
+  }
+
+  a,
+  span {
+    color: var(--color-white);
+  }
+}

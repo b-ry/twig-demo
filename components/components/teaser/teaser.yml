@@ -1,0 +1,90 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: Recipe Teaser
+status: experimental
+description: A recipe card displaying title, image, tags, rating, price, description, and a CTA link. Supports vertical (default) and horizontal orientations.
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      type: string
+      title: Title
+      description: The recipe name.
+      examples:
+        - Mediterranean Olive Pasta
+    orientation:
+      type: string
+      title: Orientation
+      description: BEM modifier class applied to the article element. Omit for the default vertical card layout.
+      enum:
+        - c-recipe-teaser--horizontal
+    image:
+      type: object
+      title: Image
+      description: Recipe image rendered as a circular thumbnail and blurred background.
+      required:
+        - url
+        - alt
+      properties:
+        url:
+          type: string
+          title: URL
+        alt:
+          type: string
+          title: Alt Text
+    rating:
+      type: string
+      title: Star Rating
+      description: Numeric rating displayed out of 5.
+      examples:
+        - '4.6'
+    tags:
+      type: array
+      title: Tags
+      description: Dietary or category labels displayed as meta badges.
+      items:
+        type: string
+      examples:
+        - - Vegetarian
+          - Vegan
+    price:
+      type: object
+      title: Price
+      description: Recipe kit price. Currency symbol is rendered separately from the amount.
+      required:
+        - number
+        - currency_code
+      properties:
+        number:
+          type: string
+          title: Amount
+          examples:
+            - '15.49'
+        currency_code:
+          type: string
+          title: Currency Code
+          examples:
+            - USD
+    body:
+      type: string
+      title: Description
+      description: Short description of the recipe.
+      examples:
+        - Golden tagliatelle ribbons served with roasted tomatoes, briny olives, and aromatic herbs.
+    link:
+      type: object
+      title: CTA Link
+      description: Call-to-action rendered via the button element.
+      required:
+        - url
+        - title
+      properties:
+        url:
+          type: string
+          title: URL
+        title:
+          type: string
+          title: Link Text
+          examples:
+            - Add To Cart

@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/components/components/teaser/teaser.css">
+
+{% set attributes = create_attribute(attributes) %}
+{% set classes = [
+  'c-recipe-teaser--card',
+  orientation,
+] %}
+
+  <article {{ attributes.addClass(classes) }} aria-label="{{ title }}">
+    <div class="c-recipe-teaser__meta-items">
+      {% if rating %}
+        <data class="c-recipe-teaser__star-rating c-recipe-teaser__meta-item" value="{{ rating }}"><span class="icon" aria-hidden="true">{% include 'icons/icon-star.svg' %}</span><span class="visually-hidden">Rating: </span>{{ rating }}<span class="visually-hidden"> out of 5</span></data>
+      {% endif %}
+
+      {% if tags %}
+        <ul class="c-recipe-teaser__tags">
+          {% for tag in tags %}
+            <li class="c-recipe-teaser__tag c-recipe-teaser__meta-item"><span class="icon" aria-hidden="true">{% include 'icons/icon-verified.svg' %}</span>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    
+    {% if image %}
+      <div class="c-recipe-teaser__image">
+        <img loading="lazy" src="{{ image.url }}" alt="{{ image.alt }}">
+      </div>
+    {% endif %}
+
+    <div class="c-recipe-teaser__content">
+      <h3 class="c-recipe-teaser__title">{{ title }}</h3>
+      
+      {% if price %}
+        <p class="c-recipe-teaser__price">
+          <span class="visually-hidden">Price: </span>
+          <span aria-hidden="true" class="c-recipe-teaser__usd">$</span>{{ price.number }}</p>
+      {% endif %}
+
+      {% if body %}
+        <p class="c-recipe-teaser__description">{{ body }}</p>
+      {% endif %}
+    </div>
+
+    {% if link %}
+      <div class="c-recipe-teaser__link">
+        {{ include('@elements/button/button.twig', { link: link }) }}
+      </div>
+    {% endif %}
+
+  </article>

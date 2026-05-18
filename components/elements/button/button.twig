@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="/components/elements/button/button.css">
+
+{% set attributes = create_attribute(attributes) %}
+{% set classes = ['button'] %}
+
+<a href="{{ link.url }}" {{ attributes.addClass(classes) }}>
+  <span>{{ link.title }}</span>
+</a>

@@ -1,0 +1,72 @@
+@use 'partials' as *;
+@use 'color';
+@use 'typography';
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  block-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-brand-mint);
+  background-image: url("../images/topographic.svg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: (20px);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: rem(1px);
+  height: rem(1px);
+  padding: 0;
+  margin: rem(-1px);
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(50%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(40px);
+
+  @include bp-min(tablet) {
+    block-size: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: rem(40px);
+  }
+}
+
+h1 {
+  @include type-scale(heading, h1);
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  @include type-scale(heading, h2);
+  margin: 0;
+  margin-block-end: rem(40px);
+  text-align: center;
+}

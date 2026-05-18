@@ -1,0 +1,56 @@
+//
+// Base - Color
+//
+// - 01 - Theme Colors
+// - 02 - Grayscale
+// - 03 - Semantic Colors
+//
+
+
+//------------------------------------
+//  01 - Theme Colors
+//------------------------------------
+
+:root {
+  --color-brand-black: #052014;
+  --color-brand-lighter-black:#082B1B;
+  --color-brand-green: #23B875;
+  --color-brand-mint: #E9FFF5;
+  --color-brand-black-rgb: 5, 32, 20;
+  --color-brand-green-rgb: 35, 184, 117;
+}
+
+
+//------------------------------------
+//  02 - Grayscale
+//------------------------------------
+
+:root {
+  --color-white: #ffffff;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+  --color-black: #000000;
+}
+
+
+//------------------------------------
+//  03 - Semantic Colors
+//------------------------------------
+
+:root {
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-gray-900);
+  --color-success: var(--color-green);
+  --color-info: var(--color-cyan);
+  --color-warning: var(--color-yellow);
+  --color-danger: var(--color-red);
+  --color-light: var(--color-gray-100);
+  --color-dark: var(--color-gray-900);
+}
