@@ -1,4 +1,8 @@
-# Twig Component Demo
+# Twig Card Component Demo
+
+The Twig Card Component Demo is based off of the designs from Ivan Adamov's Food Cards 2025 - UI Kit https://tinyurl.com/ythbatp5.
+
+I made some small adjustments to make the card accessible from the original designs. The star rating and category tags were transparent causing readability issues with the background image. 
 
 A standalone PHP/Twig environment for prototyping Drupal components without a full Drupal install. Templates, component structure, and Sass conventions mirror Drupal's patterns so work translates directly.
 
