@@ -3,7 +3,7 @@
 {% set attributes = create_attribute(attributes) %}
 {% set classes = [
   'c-recipe-teaser--card',
-  orientation,
+  'c-recipe-teaser--' ~ orientation|default('vertical')
 ] %}
 
   <article {{ attributes.addClass(classes) }} aria-label="{{ title }}">

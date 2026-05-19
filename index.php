@@ -30,7 +30,7 @@ $recipes = [
     'field_description' => 'Golden tagliatelle ribbons served with roasted tomatoes, briny olives, and aromatic herbs.',
   ],
   [
-    'field_orientation' => 'c-recipe-teaser--horizontal',
+    'field_orientation' => 'horizontal',
     'title' => 'Forest Whisper Risotto',
     'field_tags' => ['Vegetarian', 'Vegan'],
     'field_link' => [

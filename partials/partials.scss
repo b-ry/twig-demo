@@ -3,6 +3,7 @@
 // file as the import statement, `@use '[path]/partials/partials' as *`.
 
 // This file is a combination of all partials files in the theme. It is used to import all partials at once.
+@forward 'base';
 @forward 'breakpoints';
 @forward 'calculations';
 @forward 'layout';
