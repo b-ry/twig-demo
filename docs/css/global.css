@@ -1,0 +1,182 @@
+:root {
+  --color-brand-black: #052014;
+  --color-brand-lighter-black:#082B1B;
+  --color-brand-green: #23B875;
+  --color-brand-mint: #E9FFF5;
+  --color-brand-black-rgb: 5, 32, 20;
+  --color-brand-green-rgb: 35, 184, 117;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+  --color-black: #000000;
+}
+
+:root {
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-gray-900);
+  --color-success: var(--color-green);
+  --color-info: var(--color-cyan);
+  --color-warning: var(--color-yellow);
+  --color-danger: var(--color-red);
+  --color-light: var(--color-gray-100);
+  --color-dark: var(--color-gray-900);
+}
+
+:root {
+  --ff-base: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--ff-base);
+}
+
+/* prettier-ignore */
+:root {
+  /* font-sizes: heading */
+  --twig-demo-fs-heading-h1: 2.375rem; /* 38px */
+  --twig-demo-fs-heading-h2: 2rem; /* 32px */
+  --twig-demo-fs-heading-h3: 1.125rem; /* 18px */
+  /* font-sizes: body */
+  --twig-demo-fs-body-base: 0.875rem; /* 14px */
+  /* font-sizes: label */
+  --twig-demo-fs-label-15: 0.9375rem; /* 15px */
+  --twig-demo-fs-label-14: 0.875rem; /* 14px */
+  --twig-demo-fs-label-13: 0.8125rem; /* 13px */
+  /* line-heights: heading */
+  --twig-demo-lh-heading-h1: 1.0526315789; /* 40px */
+  --twig-demo-lh-heading-h2: 1.125; /* 36px */
+  --twig-demo-lh-heading-h3: 1.3333333333; /* 24px */
+  /* line-heights: body */
+  --twig-demo-lh-body-base: 1.5714285714; /* 22px */
+  /* line-heights: label */
+  --twig-demo-lh-label-15: 1.4; /* 21px */
+  --twig-demo-lh-label-14: 1.4285714286; /* 20px */
+  --twig-demo-lh-label-13: 1.3846153846; /* 18px */
+}
+@media (min-width: 768px) {
+  :root {
+    /* font-sizes: heading */
+    --twig-demo-fs-heading-h1: 2.625rem; /* 42px */
+    --twig-demo-fs-heading-h2: 2.625rem; /* 42px */
+    --twig-demo-fs-heading-h3: 1.125rem; /* 18px */
+    /* line-heights: heading */
+    --twig-demo-lh-heading-h1: 1.2380952381; /* 52px */
+    --twig-demo-lh-heading-h2: 1.1428571429; /* 48px */
+    --twig-demo-lh-heading-h3: 1.3333333333; /* 24px */
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    /* font-sizes: heading */
+    --twig-demo-fs-heading-h1: 3.25rem; /* 52px */
+    --twig-demo-fs-heading-h2: 2.75rem; /* 44px */
+    --twig-demo-fs-heading-h3: 1.25rem; /* 20px */
+    /* line-heights: heading */
+    --twig-demo-lh-heading-h1: 1; /* 52px */
+    --twig-demo-lh-heading-h2: 1.1818181818; /* 52px */
+    --twig-demo-lh-heading-h3: 1.4; /* 28px */
+  }
+}
+@media (min-width: 1200px) {
+  :root {
+    /* font-sizes: heading */
+    --twig-demo-fs-heading-h1: 3.75rem; /* 60px */
+    --twig-demo-fs-heading-h2: 3.25rem; /* 52px */
+    --twig-demo-fs-heading-h3: 1.375rem; /* 22px */
+    /* line-heights: heading */
+    --twig-demo-lh-heading-h1: 1; /* 60px */
+    --twig-demo-lh-heading-h2: 1.1538461538; /* 60px */
+    --twig-demo-lh-heading-h3: 1.3636363636; /* 30px */
+  }
+}
+
+:root {
+  --fw-thin: 100;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-book: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  block-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-brand-mint);
+  background-image: url("../images/topographic.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(50%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+@media (min-width: 768px) {
+  .row {
+    block-size: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+h1 {
+  font-size: var(--twig-demo-fs-heading-h1);
+  line-height: var(--twig-demo-lh-heading-h1);
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--twig-demo-fs-heading-h2);
+  line-height: var(--twig-demo-lh-heading-h2);
+  margin: 0;
+  margin-block-end: 2.5rem;
+  text-align: center;
+}

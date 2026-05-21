@@ -7,6 +7,7 @@
   },
   "scripts": {
     "watch": "sass --watch --no-source-map --load-path=partials components/base/global.scss:css/global.css components/components/teaser/src:components/components/teaser components/elements/button/src:components/elements/button",
-    "build": "sass --no-source-map --load-path=partials components/base/global.scss:css/global.css components/components/teaser/src:components/components/teaser components/elements/button/src:components/elements/button"
+    "build": "sass --no-source-map --load-path=partials components/base/global.scss:css/global.css components/components/teaser/src:components/components/teaser components/elements/button/src:components/elements/button",
+    "build-static": "bash build.sh"
   }
 }
